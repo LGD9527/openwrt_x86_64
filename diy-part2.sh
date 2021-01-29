@@ -13,23 +13,23 @@
 # Modify default IP
 #sed -i 's/192.168.1.1/192.168.5.1/g' package/base-files/files/bin/config_generate
 
-# Çå³ý¾É°æargonÖ÷Ìâ²¢À­È¡×îÐÂ°æ
+# æ¸…é™¤æ—§ç‰ˆargonä¸»é¢˜å¹¶æ‹‰å–æœ€æ–°ç‰ˆ
 #pushd package/lean
 #rm -rf luci-theme-argon
 #git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon luci-theme-argon
 
-# ¸ü¸ÄÖ÷Ìâ
+# æ›´æ”¹ä¸»é¢˜
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ../feeds/luci/collections/luci/Makefile
 
-# ¸ü¸ÄÊ±Çø
+# æ›´æ”¹æ—¶åŒº
 #sed -i "s/'UTC'/'CST-8'\n        set system.@system[-1].zonename='Asia\/Shanghai'/g" ../package/base-files/files/bin/config_generate
 
-#ÐÞ¸´ºËÐÄ¼°Ìí¼ÓÎÂ¶ÈÏÔÊ¾
+#ä¿®å¤æ ¸å¿ƒåŠæ·»åŠ æ¸©åº¦æ˜¾ç¤º
 #sed -i 's|pcdata(boardinfo.system or "?")|luci.sys.exec("uname -m") or "?"|g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 #sed -i 's/or "1"%>/or "1"%> ( <%=luci.sys.exec("expr `cat \/sys\/class\/thermal\/thermal_zone0\/temp` \/ 1000") or "?"%> \&#8451; ) /g' feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
 
 # Add ServerChan
-git clone --depth=1 https://github.com/tty228/luci-app-serverchan
+#git clone --depth=1 https://github.com/tty228/luci-app-serverchan
 
 #Add luci-app-adguardhome
 #svn co https://github.com/Lienol/openwrt/tree/main/package/diy/luci-app-adguardhome
